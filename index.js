@@ -33,7 +33,7 @@ const questions = [
             type: 'list',
             message:'What license would you like to use?',
             name: 'license',
-            choices: ['None', 'MIT', 'Creative Commons', 'Mozilla Public License', 'ISC', 'Apache'],
+            choices: ['None', 'MIT', 'IBM', 'Mozilla Public License', 'ISC', 'Apache']
         }, 
 
         {
@@ -56,7 +56,7 @@ const questions = [
         {
             type: 'input',
             message: 'Please enter your email address.',
-            name: 'contact',
+            name: 'email',
         }
     ]
 
@@ -71,7 +71,7 @@ function writeToFile(fileName, userAnswers) {
 function init() {
     inquirer.prompt(questions).then((userAnswers) => {
         console.log(userAnswers)
-        writeToFile('README9.md', generateMarkdown({ ...userAnswers }));
+        writeToFile('README14.md', generateMarkdown({ ...userAnswers }));
     });
 }
 
